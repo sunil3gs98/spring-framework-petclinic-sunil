@@ -6,6 +6,13 @@
     <artifactId>spring-framework-petclinic</artifactId>
     <version>6.1.4</version>
 
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <!-- CHANGE HERE by your team Nexus server -->
+            <url>http://13.126.124.159:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
     <name>Spring Framework Petclinic</name>
     <packaging>war</packaging>
     <description>A Spring Framework application based on JSP, Spring MVC, Spring Data JPA, Hibernate and JDBC</description>
@@ -654,5 +661,11 @@
             </build>
         </profile>
    </profiles>
-
+<repositories>
+        <repository>
+            <id>maven-releases</id>
+            <name>maven-releases</name>
+            <url>http://13.126.124.159:8081/repository/maven-releases/</url>
+        </repository>
+</repositories>
 </project>
