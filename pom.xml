@@ -35,8 +35,8 @@
 
         <!-- Web dependencies -->
         <!-- webjars-bootstrap.version>5.3.2</webjars-bootstrap.version --> <!-- Report bootstrap version to the footer.tag -->
-        <webjars-font-awesome.version>4.7.0</webjars-font-awesome.version>
-        <webjars-flatpickr.version>4.6.13</webjars-flatpickr.version>
+        <!--webjars-font-awesome.version>4.7.0</webjars-font-awesome.version -->
+        <!--webjars-flatpickr.version>4.6.13</webjars-flatpickr.version -->
 
         <!-- Jakarta EE / Java SE dependencies -->
         <tomcat.version>10.1.19</tomcat.version>
