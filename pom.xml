@@ -146,6 +146,13 @@
             <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
             <version>${jstl-api.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.6</version>
+        </dependency>
+
         <!-- Tomcat 10 looks like to require it -->
         <dependency>
             <groupId>org.glassfish.web</groupId>
