@@ -95,18 +95,6 @@
         <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
         <sonar.language>java</sonar.language>
     </properties>
-<distributionManagement>
-  <repository>
-    <id>maven-releases</id>
-    <!-- CHANGE HERE by your team Nexus server -->
-    <url>http://13.126.124.159:8081/repository/maven-releases/</url>
-  </repository>
-</distributionManagement>
-<repository>
-  <id>maven-releases</id>
-  <name>maven-releases</name>
-  <url>http://13.126.124.159:8081/repository/maven-releases/</url>
-</repository>
     <dependencyManagement>
         <dependencies>
             <dependency>
