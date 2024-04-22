@@ -89,7 +89,13 @@
         <docker.image.prefix>springcommunity</docker.image.prefix>
 
     </properties>
-
+    <distributionManagement>
+      <repository>
+        <id>maven-releases</id>
+        <!-- CHANGE HERE by your team Nexus server -->
+        <url>http://13.126.124.159:8081/repository/maven-releases/</url>
+      </repository>
+    </distributionManagement>
     <dependencyManagement>
         <dependencies>
             <dependency>
