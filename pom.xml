@@ -19,27 +19,24 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <jacoco.version>0.8.6</jacoco.version>
-        <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
-        <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-        <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
-        <sonar.language>java</sonar.language>
 
-    </properties>
+        <!-- SonarQube configuration -->
+        <sonar.organization>spring-petclinic</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
         <!-- Spring -->
         <!-- For framework compatibility, refer to the Spring Boot Dependencies BOM and to the gradle.properties -->
         <!-- https://github.com/spring-projects/spring-boot/blob/main/spring-boot-project/spring-boot-dependencies/build.gradle -->
         <!-- https://github.com/spring-projects/spring-boot/blob/main/gradle.properties -->
-        <!-- spring-framework.version>6.1.4</spring-framework.version -->
+        <spring-framework.version>6.1.4</spring-framework.version>
 
         <!-- Web dependencies -->
-        <!-- webjars-bootstrap.version>5.3.2</webjars-bootstrap.version --> <!-- Report bootstrap version to the footer.tag -->
-        <!--webjars-font-awesome.version>4.7.0</webjars-font-awesome.version -->
-        <!--webjars-flatpickr.version>4.6.13</webjars-flatpickr.version -->
+        <webjars-bootstrap.version>5.3.2</webjars-bootstrap.version> <!-- Report bootstrap version to the footer.tag -->
+        <webjars-font-awesome.version>4.7.0</webjars-font-awesome.version>
+        <webjars-flatpickr.version>4.6.13</webjars-flatpickr.version>
 
         <!-- Jakarta EE / Java SE dependencies -->
-        
+        <tomcat.version>10.1.19</tomcat.version>
         <jaxb-api.version>4.0.1</jaxb-api.version>
         <jaxb-runtime.version>4.0.4</jaxb-runtime.version>
         <jakarta-activation.version>2.1.2</jakarta-activation.version>
@@ -92,19 +89,6 @@
         <docker.image.prefix>springcommunity</docker.image.prefix>
 
     </properties>
-    <distributionManagement>
-      <repository>
-        <id>maven-releases</id>
-        <!-- CHANGE HERE by your team Nexus server -->
-        <url>http://13.126.124.159:8081/repository/maven-releases/</url>
-      </repository>
-    </distributionManagement>
-    <repository>
-      <id>maven-releases</id>
-      <name>maven-releases</name>
-      <url>http://3.95.151.101:8081/repository/maven-releases/</url>
-    </repository>
-   
 
     <dependencyManagement>
         <dependencies>
@@ -144,13 +128,6 @@
             <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
             <version>${jstl-api.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.jacoco</groupId>
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <version>0.8.6</version>
-        </dependency>
-
         <!-- Tomcat 10 looks like to require it -->
         <dependency>
             <groupId>org.glassfish.web</groupId>
@@ -642,26 +619,6 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>${jacoco.version}</version>
-                <executions>
-                    <execution>
-                        <id>jacoco-initialize</id>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>jacoco-site</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
 
                     <plugin>
                         <groupId>com.gitlab.haynes</groupId>
