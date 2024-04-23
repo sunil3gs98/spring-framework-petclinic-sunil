@@ -10,7 +10,7 @@
         <repository>
             <id>maven-releases</id>
             <!-- CHANGE HERE by your team Nexus server -->
-            <url>http://13.126.124.159:8081/repository/maven-releases/</url>
+            <url>http://54.175.150.200:8081/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
     <name>Spring Framework Petclinic</name>
@@ -665,7 +665,7 @@
         <repository>
             <id>maven-releases</id>
             <name>maven-releases</name>
-            <url>http://13.126.124.159:8081/repository/maven-releases/</url>
+            <url>http://54.175.150.200:8081/repository/maven-releases/</url>
         </repository>
 </repositories>
 </project>
